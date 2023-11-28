@@ -11,8 +11,8 @@ class ArtistRepository:
         rows = self._connection.execute('SELECT * from artists')
         artists = []
         for row in rows:
-            item = Artist(row["id"], row["name"], row["genre"])
-            artists.append(item)
+            artist = Artist(row["id"], row["name"], row["genre"])
+            artists.append(artist)
         return artists
 
     # Find a single artist by their id
